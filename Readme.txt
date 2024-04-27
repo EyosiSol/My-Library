@@ -1,0 +1,1 @@
+## this project tries to deep dive into the web development world where i build a library management web app in which it enables me to add a book-card in which the name of the book, its author, page number and read status is shown. 
