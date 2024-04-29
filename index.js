@@ -39,3 +39,23 @@ function submitForm() {
     modal.close()
     
 }
+
+document.addEventListener('click',(event)=>{
+    if(event.target.classList.contains('read') || event.target.classList.contains('readed')){     const button = event.target;
+        if(button.classList.contains('read')){
+            button.classList.remove('read')
+            button.classList.add('readed')
+            button.textContent = "Not Read"
+        }
+        else if (button.classList.contains('readed')){
+            button.classList.remove('readed')
+            button.classList.add('read')
+            button.textContent = 'Read'
+        }
+    }
+    else if ( event.target.classList.contains('remove')){
+        const bookCard = event.target.closest('.temp1');
+        bookCard.remove();
+    }
+
+})
