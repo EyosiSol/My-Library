@@ -17,7 +17,7 @@
         <button class="add">+ Add Book</button>
       </div>
       <div class="grid-container">
-            <div class="temp1">
+            <!-- <div class="temp1">
                 <div class="title">
                     The art of war
                 </div> 
@@ -31,10 +31,10 @@
                     <button class="read">Have Read</button>
                     <button class="remove">Remove</button>
                 </div>
-            </div>
+            </div> -->
         </div>
         <dialog class="modal" id="modal">
-          <form id="book-form">
+          <form id="bookform" method="dialog">
             <h2>Add a New book</h2>
             <div class="title-form">
               <label for="title">Title:</label>
@@ -48,7 +48,7 @@
               <label for="pages">Pages:</label>
               <input type="number" name ="page" id="pages" placeholder="Eg: 246 pages"/>
             </div>
-            <div class="submit"><button type="submit" id="submit">Submit</button></div>
+            <div class="submit"><button type="submit" onclick="submitForm()" id="submit">Submit</button></div>
           </form>
         </dialog>
     </div>

@@ -2,37 +2,40 @@ const openModal = document.querySelector(".add");
 const submit = document.querySelector("#submit");
 const modal = document.querySelector("#modal");
 
-const form = document.querySelector("#book-form");
-const booksGrid = document.querySelector(".grid-container");
+const remove = document.querySelector(".remove")
+
 
 openModal.addEventListener("click", () => {
   modal.showModal();
 });
 
-form.addEventListener("submit", () => {
-  const title = document.getElementById("title").value;
-  const author = document.getElementById("author").value;
-  const page = document.getElementById("pages").value;
 
-  const newBookCard = document.createElement("div");
+function submitForm() {
+  const form = document.getElementById("bookform");
 
-  newBookCard.classList.add(".grid-container>div");
-  newBookCard.innerHTML = `
-    <div class="temp1">
-        <div class="title">${title}</div> 
-        <div class="author">${author}</div>
-        <div class="page">${page}</div>
+  const title = document.querySelector("#title").value;
+  const author = document.querySelector("#author").value;
+  const pages = document.querySelector("#pages").value;
 
-        <div class="read-remove">
+  const bookcard = document.createElement("div")
+  bookcard.classList.add('temp1')
+
+  bookcard.innerHTML = `
+    <div class="title">${title}</div> 
+    <div class="author">${author}</div>
+    <div class="page">${pages}</div>
+    <div class="read-remove">
         <button class="read">Have Read</button>
         <button class="remove">Remove</button>
     </div>
-    </div>
     `;
 
-  booksGrid.appendChild(newBookCard);
-  form.reset();
+    const container =document.querySelector(".grid-container")
 
-  const modal = document.querySelector("#modal");
-  modal.close();
-});
+    container.appendChild(bookcard);
+
+    form.reset();
+
+    modal.close()
+    
+}

@@ -54,7 +54,7 @@ body {
     gap: 40px;
     margin: 5vh 10vw ;
 }
-.grid-container>div{
+.temp1{
     height: 250px;
     width: 300px;
     background-color: white;
@@ -68,12 +68,12 @@ body {
   box-shadow: 6px 6px 8px rgba(163, 161, 161, 0.2);
 }
 
-.grid-container > div:hover{
+.temp1:hover{
     box-shadow: 6px 6px 8px rgba(194, 194, 194, 0.575);
     transform: translateY(-5px);
     cursor: pointer;
 }
-.grid-container>div>div{
+.temp1>div{
     /* border: 1px solid black; */
     align-content: center;
 }
